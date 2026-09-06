@@ -28,7 +28,8 @@ An agent isn't a prompt, and it isn't a scraper. It's a **loop**: the model answ
 gboard is a CLI and a library, not a dashboard. You give it a message; it talks to Grok, runs tools when Grok asks, grounds answers in real-time X and the web, and remembers the conversation.
 
 <p align="center">
-  <img src="assets/cli.png" alt="gboard ask --trace — the agent loop: steps, tool calls, live search, and timing" width="760" />
+  <img width="1228" height="422" alt="image" src="https://github.com/user-attachments/assets/9cfd1ff7-fd96-429e-b40d-6fe083236bcf" />
+
 </p>
 
 | capability | what it means | touches the network |
