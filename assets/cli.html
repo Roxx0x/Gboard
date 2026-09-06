@@ -1,0 +1,66 @@
+<!doctype html>
+<!--
+  A styled render of a gboard session, for screenshotting into assets/cli.png.
+  Open in a browser, screenshot the terminal card (it's sized ~760px wide to
+  match the README image width), save as assets/cli.png.
+  Shows the real-backend experience, not the offline stub.
+-->
+<html>
+<head>
+<meta charset="utf-8" />
+<style>
+  :root { color-scheme: dark; }
+  body {
+    margin: 0; padding: 40px;
+    background: radial-gradient(1200px 600px at 30% -10%, #16181c 0%, #000 60%);
+    font-family: "SF Mono", "JetBrains Mono", "Cascadia Code", ui-monospace, Menlo, Consolas, monospace;
+    display: flex; justify-content: center;
+  }
+  .term {
+    width: 760px; background: #0a0a0b; border: 1px solid #26282e;
+    border-radius: 12px; overflow: hidden;
+    box-shadow: 0 24px 70px rgba(0,0,0,.6), 0 0 0 1px rgba(255,255,255,.02) inset;
+  }
+  .bar {
+    height: 40px; display: flex; align-items: center; gap: 8px; padding: 0 14px;
+    background: linear-gradient(#151619, #101114); border-bottom: 1px solid #222;
+  }
+  .dot { width: 12px; height: 12px; border-radius: 50%; }
+  .r { background: #ff5f57; } .y { background: #febc2e; } .g { background: #28c840; }
+  .title { color: #7d828c; font-size: 12.5px; margin-left: 10px; letter-spacing: .3px; }
+  .body { padding: 20px 22px 24px; font-size: 13.5px; line-height: 1.75; color: #d7dbe0; }
+  .you { color: #1d9bf0; font-weight: 600; }
+  .grok { color: #fff; font-weight: 600; }
+  .out { color: #e6e9ee; }
+  .dim { color: #6e7681; }
+  .tool { color: #00d17a; }
+  .cyan { color: #34d3eb; }
+  .sp { display: block; height: 10px; }
+  b { color: #fff; }
+</style>
+</head>
+<body>
+  <div class="term">
+    <div class="bar">
+      <span class="dot r"></span><span class="dot y"></span><span class="dot g"></span>
+      <span class="title">gboard chat — grok-4 · live search: auto</span>
+    </div>
+    <div class="body">
+<span class="you">you ›</span> <span class="out">what is 128 * 12?</span>
+<span class="dim">     ↳ tool</span> <span class="tool">calc("128 * 12")</span> <span class="dim">→ 1536</span>
+<span class="grok">grok ›</span> <span class="out">128 × 12 = <b>1536</b>.</span>
+<span class="sp"></span>
+<span class="you">you ›</span> <span class="out">what's the latest from @xai this week?</span>
+<span class="dim">     ↳</span> <span class="cyan">live search</span> <span class="dim">· X · web — 6 sources</span>
+<span class="grok">grok ›</span> <span class="out">This week @xai shipped a faster Grok tier and opened the</span>
+<span class="out">       Live Search API to all developers. Reception on X is</span>
+<span class="out">       strong on latency; a few threads flag pricing.</span> <span class="dim">[grounded]</span>
+<span class="sp"></span>
+<span class="you">you ›</span> <span class="out">remember my project is called gboard</span>
+<span class="grok">grok ›</span> <span class="out">Pinned. I'll keep that in mind for the rest of our chat.</span>
+<span class="sp"></span>
+<span class="you">you ›</span> <span class="dim">▍</span>
+    </div>
+  </div>
+</body>
+</html>
